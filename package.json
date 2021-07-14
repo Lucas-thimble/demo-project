@@ -1,0 +1,32 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --harmony app.js",
+    "test": "mocha --harmony --report spec --bail test/**/*test.js",
+    "migrate": "db-migrate -db db_url",
+    "migrate:test": "NODE_ENV=test db-migrate -db db_url"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^1.2.0",
+    "koa2": "^2.0.0-alpha.7",
+    "mocha": "^7.2.0",
+    "monk": "^7.3.4",
+    "nock": "^13.1.1",
+    "sinon": "^11.1.1",
+    "bunyan": "^1.8.0",
+    "t-koa-metrics": "git+ssh://git@github.com:carasystems/t-koa-metrics.git#feature/v3",
+    "koa-better-body": "git+ssh://git@github.com:carasystems/koa-better-body.git",
+    "supertest": "^1.2.0",
+    "chai": "^3.5.0",
+    "dirty-chai": "^1.2.2",
+    "co-sleep": "0.0.1",
+    "co-supertest": "0.0.10",
+    "lodash": "^4.8.2",
+    "moment-timezone": "^0.5.3"
+  }
+}
