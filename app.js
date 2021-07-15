@@ -15,10 +15,6 @@ fs.readdirSync(routesPath).forEach(file => {
     require(`${routesPath}/${file}`)(app, route);
   });
 
-if (config.consul && config.consul.service) {
-  registerService(config.consul);
-}
-
 app.start(config.server.port, () => {
   app.server.keepAliveTimeout = 61 * 1000;
   app.server.headersTimeout = 65 * 1000;
